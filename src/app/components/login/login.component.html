@@ -1,0 +1,16 @@
+<div layout="row" layout-sm="column">
+<div class="container">
+  <div class="form" >
+    <h1>Welcome to Dunder-Miflin</h1>
+    <p>Welcome to the Dunder Miflin Internal Network. Please enter your username to view your posts and comments.</p>
+    <mat-form-field>
+      <!--<mat-error *ngIf="verifyEmail.h('email') && !emailFormControl.hasError('required')">-->
+      <!--Invalid Email-->
+      <!--</mat-error>-->
+      <input matInput type="email" [(ngModel)]="email"/>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="button" (click)="verifyEmail()">Login</button>
+  </div>
+</div>
+
