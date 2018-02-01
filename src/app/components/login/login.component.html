@@ -1,16 +1,28 @@
-<div layout="row" layout-sm="column">
+<!--<div layout="row" layout-sm="column">-->
+  <!--<div class="container">-->
+    <!--<div class="form">-->
+      <!--<h1>Welcome to Dunder-Miflin</h1>-->
+      <!--<p>Welcome to the Dunder Miflin Internal Network. Please enter your username to view your posts and comments.</p>-->
+      <!--<mat-form-field>-->
+        <!--&lt;!&ndash;<mat-error *ngIf="verifyEmail.h('email') && !emailFormControl.hasError('required')">&ndash;&gt;-->
+        <!--&lt;!&ndash;Invalid Email&ndash;&gt;-->
+        <!--&lt;!&ndash;</mat-error>&ndash;&gt;-->
+        <!--<input matInput type="email" [(ngModel)]="email"/>-->
+      <!--</mat-form-field>-->
+      <!--<br>-->
+      <!--<button mat-raised-button color="primary" type="button" (click)="verifyEmail()">Login</button>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
 <div class="container">
-  <div class="form" >
-    <h1>Welcome to Dunder-Miflin</h1>
-    <p>Welcome to the Dunder Miflin Internal Network. Please enter your username to view your posts and comments.</p>
-    <mat-form-field>
-      <!--<mat-error *ngIf="verifyEmail.h('email') && !emailFormControl.hasError('required')">-->
-      <!--Invalid Email-->
-      <!--</mat-error>-->
-      <input matInput type="email" [(ngModel)]="email"/>
-    </mat-form-field>
-    <br>
-    <button mat-raised-button color="primary" type="button" (click)="verifyEmail()">Login</button>
+  <div class="wrapper">
+    <form class="form-signin">
+      <h2 class="form-signin-heading">Welcome to Dunder-Miflin</h2>
+      <p>Welcome to the Dunder Miflin Internal Network. Please enter your username to view your posts and comments.</p>
+      <input type="text" class="form-control" name="email" placeholder="Email Address" [(ngModel)]="email" required="" autofocus=""/>
+      <div class="padding"></div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="verifyEmail()">Login</button>
+    </form>
   </div>
 </div>
-

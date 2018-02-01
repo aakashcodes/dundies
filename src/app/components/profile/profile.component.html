@@ -1,15 +1,43 @@
-<div class="callout">
-<h2>Profile Detail</h2>
-<hr>
-<h3 class="userName">Name</h3>
-  <a class="userLocation" href=""></a>
-  <a class="userPhone" href=""></a>
-  <a class="userEmail" href=""></a>
+<!--<div class="container">-->
+
+<!--<div class="bs-callout">-->
+<!--<h3 class="userName">{{userDetails.username}}</h3>-->
+<!--<a class="userLocation" href="">{{userDetails.website}}</a>-->
+<!--<a class="userPhone" href="">{{userDetails.phone}}</a>-->
+<!--<a class="userEmail" href="">{{userDetails.email}}</a>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--</div>-->
+<div class="container">
+  <div class="clearfix">
+    <div class="row">
+      <div class="col-4">
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+          <h4 class="card-header text-left">Profile Detail</h4>
+          <div class="card-body text-info">
+            <h5 class="card-title text-left">{{userDetails.name}}</h5>
+            <p class="card-text text-left">
+              <i class="fas fa-map-marker-alt fa-lg"></i>
+              <a class="userLocation"
+                 href="http://maps.google.com/?q={{userDetails.address.geo.lat}},{{userDetails.address.geo.lng}}">{{userDetails.address.street
+                + ", " + userDetails.address.suite}}</a>
+              <a class="userLocation"
+                 href="http://maps.google.com/?q={{userDetails.address.geo.lat}},{{userDetails.address.geo.lng}}">{{userDetails.address.city
+                + ", " + userDetails.address.zipcode}}</a>
+              <i class="fas fa-phone fa-lg"></i>
+              <a class="userPhone" href="tel:{{userDetails.phone}}">{{userDetails.phone}}</a>
+              <i class="fas fa-envelope fa-lg"></i>
+              <a class="userEmail" href="mailto:{{userDetails.email}}">{{userDetails.email}}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <app-post *ngFor=" let post of posts" [inputPost]="post">
+        </app-post>
+      </div>
+    </div>
+  </div>
 </div>
-<mat-card>
-  <mat-card-title>
-
-      <span class="md-headline">Card header</span>
-  </mat-card-title>
-</mat-card>
-

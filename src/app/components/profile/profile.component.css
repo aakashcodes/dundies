@@ -1,0 +1,25 @@
+.container {
+  margin: 2em;
+}
+
+.card {
+  margin: 0 auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1em;
+}
+
+.profileCard {
+  text-align: left;
+}
+
+a {
+  padding: 4px 2px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+i {
+  display: inline-block;
+  vertical-align: middle;
+}

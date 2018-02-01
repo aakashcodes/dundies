@@ -1,0 +1,27 @@
+<!--<div class="container-fluid">-->
+  <!--<div class="row content">-->
+    <!--<div class="col-sm-10">-->
+      <!--<div class="card">-->
+        <!--<div class="card-header" id="headingOne">-->
+          <!--<h3 class="mb-0">-->
+            <!--{{inputPost.title}}-->
+          <!--</h3>-->
+          <!--<div class="card-body">-->
+            <!--{{inputPost.body}}-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-sm-9" *ngFor="let comment of inputPost.comments">-->
+      <!--<app-comments [inputComment]="comment"></app-comments>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="card border-green mb-3">
+  <h3 class="card-header">{{inputPost.title}}</h3>
+  <div class="card-body text-dark">
+    <h6 class="card-title">{{inputPost.body}}</h6>
+    <p class="card-text" *ngFor="let comment of inputPost.comments"><app-comments [inputComment]="comment"></app-comments></p>
+  </div>
+</div>
