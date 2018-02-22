@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 } )
 export class LoginComponent implements OnInit {
   email: string = "";
+  errorMsg: string = "";
 
   constructor ( private api: ApiService, private router: Router ) {
 
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   verifyEmail (): void {
+    this.errorMsg='';
     if (this.email != '') {
       this.api.getUser ().subscribe ( ( data ) => {
         data.forEach ( user => {
@@ -27,9 +29,14 @@ export class LoginComponent implements OnInit {
             localStorage.setItem ( 'loggedInUser', JSON.stringify ( user ) );
             this.router.navigate ( [ '/profile/1' ] );
           }
-        } )
+        } );
+          this.errorMsg="Email address not found.";
       }, ( error ) => {
+        console.log(error);
+        this.errorMsg="There was a error while fetching user details. Please try again."
       } )
+    } else {
+      this.errorMsg= "Email is required.";
     }
   }
 
