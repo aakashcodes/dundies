@@ -1,15 +1,3 @@
-<!--<div class="container">-->
-
-<!--<div class="bs-callout">-->
-<!--<h3 class="userName">{{userDetails.username}}</h3>-->
-<!--<a class="userLocation" href="">{{userDetails.website}}</a>-->
-<!--<a class="userPhone" href="">{{userDetails.phone}}</a>-->
-<!--<a class="userEmail" href="">{{userDetails.email}}</a>-->
-<!--</div>-->
-<!--</div>-->
-
-<!--</div>-->
-<!--</div>-->
 <div class="container">
   <div class="clearfix">
     <div class="row">
@@ -20,12 +8,8 @@
             <h5 class="card-title text-left">{{userDetails.name}}</h5>
             <p class="card-text text-left">
               <i class="fas fa-map-marker-alt fa-lg"></i>
-              <a class="userLocation"
-                 href="http://maps.google.com/?q={{userDetails.address.geo.lat}},{{userDetails.address.geo.lng}}">{{userDetails.address.street
-                + ", " + userDetails.address.suite}}</a>
-              <a class="userLocation"
-                 href="http://maps.google.com/?q={{userDetails.address.geo.lat}},{{userDetails.address.geo.lng}}">{{userDetails.address.city
-                + ", " + userDetails.address.zipcode}}</a>
+              <a class="userLocation" href="http://maps.google.com/?q={{userDetails.address.geo.lat}},{{userDetails.address.geo.lng}}">{{userDetails.address.street + ", " + userDetails.address.suite}}</a>
+              <a class="userLocation" href="http://maps.google.com/?q={{userDetails.address.geo.lat}},{{userDetails.address.geo.lng}}">{{userDetails.address.city + ", " + userDetails.address.zipcode}}</a>
               <i class="fas fa-phone fa-lg"></i>
               <a class="userPhone" href="tel:{{userDetails.phone}}">{{userDetails.phone}}</a>
               <i class="fas fa-envelope fa-lg"></i>
